@@ -1,0 +1,35 @@
+{
+    "manifest_version": 2,
+    "name": "Show more Info",
+    "version": "1.0",
+    "description": "Extension to show data",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "https://csgofloat.com/*"
+      ],      
+    "content_scripts": [
+      {
+        "matches": [
+          "https://csgofloat.com/db*"
+        ],
+        "js": [
+          "contentScript.js"
+        ]
+      }
+    ],
+    "icons": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "browser_action": {
+      "default_icon": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+      },
+      "default_popup": "popup.html"
+    }
+}
+  
